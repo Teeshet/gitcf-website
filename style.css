@@ -1,364 +1,69 @@
-/* --------------------
- Global Styles
---------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
   color: #333333;
-  line-height: 1.6;
 }
-
-/* Colors */
-:root {
-  --navy: #0D2C40;
-  --gold: #D4A017;
-  --teal: #007C91;
-  --burgundy: #7B2B43;
-  --white: #FFFFFF;
-  --dark-gray: #333333;
-}
-
-/* --------------------
- Header Navigation
---------------------- */
 header {
-  background: var(--white);
+  background: #FFFFFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
-
 header .logo img {
-  height: 50px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-nav ul li {
-  color: var(--dark-gray);
-  font-weight: 500;
-  font-size: 16px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-nav ul li:hover {
-  color: var(--gold);
-}
-
-/* --------------------
- Hero Section
---------------------- */
-.hero {
-  background: url('hero-image.jpg') center/cover no-repeat;
-  background-color: rgba(0,0,0,0.4);
-  background-blend-mode: overlay;
-  color: var(--white);
-  text-align: center;
-  padding: 120px 20px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 20px;
-  margin-bottom: 25px;
-}
-
-.hero .btn {
-  padding: 12px 25px;
-  margin: 10px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.btn.gold {
-  background-color: var(--gold);
-  color: var(--white);
-}
-
-.btn.navy {
-  background-color: var(--navy);
-  color: var(--white);
-}
-
-.btn.gold:hover {
-  background-color: #b88c15;
-}
-
-.btn.navy:hover {
-  background-color: #0b2333;
-}
-
-/* --------------------
- About Section
---------------------- */
-.about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  padding: 60px 10%;
-}
-
-.about img {
-  width: 350px;
-  border-radius: 8px;
-}
-
-.about-text h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.about-text p {
-  max-width: 500px;
-  font-size: 18px;
-}
-
-/* --------------------
- Ministries Section
---------------------- */
-.ministries {
-  background: var(--white);
-  padding: 60px 10%;
-  text-align: center;
-}
-
-.ministries h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-}
-
-.ministry-card {
-  display: inline-block;
-  background: var(--white);
-  padding: 20px;
-  margin: 10px;
-  width: 250px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.ministry-card img {
   height: 60px;
-  margin-bottom: 15px;
 }
-
-/* --------------------
- Events Section
---------------------- */
-.events {
-  background: #F7F7F7;
-  padding: 60px 10%;
-  text-align: center;
-}
-
-.events h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-}
-
-.event-card {
-  background: var(--white);
-  display: inline-block;
-  width: 250px;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.event-card .btn {
-  background: var(--gold);
-  color: var(--white);
-  border: none;
-  padding: 8px 15px;
-  margin-top: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.event-card .btn:hover {
-  background: #b88c15;
-}
-
-/* --------------------
- Sermons Section
---------------------- */
-.sermons {
-  padding: 60px 10%;
-  text-align: center;
-}
-
-.sermons h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.sermons .btn {
-  background: var(--gold);
-  color: var(--white);
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-weight: 600;
-}
-
-/* --------------------
- Footer
---------------------- */
-footer {
-  background: var(--navy);
-  color: var(--white);
-  padding: 30px 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-footer .footer-logo img {
-  height: 40px;
-}
-
-footer .footer-links {
+header nav ul {
+  list-style: none;
   display: flex;
   gap: 20px;
 }
-
-footer .footer-links a {
-  color: var(--white);
+header nav ul li a {
   text-decoration: none;
+  color: #0D2C40;
+  font-weight: 500;
 }
-
-footer .footer-links a:hover {
-  color: var(--gold);
+.mobile-menu-btn {
+  display: none;
 }
-
-footer .social-icons {
-  display: flex;
-  gap: 15px;
+.hero {
+  background: #7B2B43;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
 }
-
-footer .social-icons i {
-  font-size: 20px;
-  cursor: pointer;
+.hero .btn.gold {
+  background: #D4A017;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
 }
-
-/* --------------------
- Mobile Responsive Styles
---------------------- 
-@media (max-width: 1024px) {
-  header {
-    padding: 15px 20px;
-  }
-
-  nav ul {
-    gap: 15px;
-  }
-
-  .about {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 5%;
-  }
-
-  .about img {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .ministries, .events, .sermons {
-    padding: 40px 5%;
-  }
-
-  .ministry-card, .event-card {
-    width: 100%;
-    max-width: 350px;
-  }
+.hero .btn.navy {
+  background: #0D2C40;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
 }
-
+.about, .ministries, .events, .sermons {
+  padding: 40px 10%;
+}
+footer {
+  background: #0D2C40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 @media (max-width: 768px) {
-  /* Mobile Menu 
-  nav ul {
-    display: none; /* Hide full menu 
-  }
-
-  .mobile-menu-btn {
-    display: block;
-    background: var(--gold);
-    color: var(--white);
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .mobile-menu {
-    display: none;
-    background: var(--navy);
-    color: var(--white);
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .mobile-menu a {
-    color: var(--white);
-    text-decoration: none;
-  }
-
-  .mobile-menu a:hover {
-    color: var(--gold);
-  }
-
-  /* Hero Section Adjustments *
-  .hero {
-    padding: 80px 20px;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .hero .btn {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  /* Footer Adjustments *
-  footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
+  header nav ul { display: none; }
+  .mobile-menu-btn { display: block; background: #D4A017; color: white; padding: 5px 10px; cursor: pointer; }
+  .mobile-menu { display: none; background: #0D2C40; padding: 10px; }
+  .mobile-menu a { display: block; color: white; padding: 5px; }
 }
-*/
